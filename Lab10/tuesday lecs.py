@@ -1,0 +1,25 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t,x,y,z,dp =  np.loadtxt('paradata.csv', delimiter = ',',unpack =True,skiprows=1)
+fig, axs = plt.subplots(2, 1)
+axs[0].plot(t, x, 'b-.', label = 'Gx')
+axs[0].plot(t, y, 'g', label = 'Gy')
+axs[0].plot(t, z, 'r--', label = 'Gz')
+axs[0].set_xlim(0, 850)
+axs[0].set_ylim(-0.2, 1.8)
+axs[0].set_xlabel('time (s)')
+axs[0].set_ylabel('Acc. (g)')
+axs[0].grid(True)
+
+axs[1].plot(t, x, 'b-.', label = 'Gx')
+axs[1].plot(t, y, 'g', label = 'Gy')
+axs[1].plot(t, z, 'r--', label = 'Gz')
+axs[1].set_xlim(90, 120)
+axs[1].set_ylim(-0.2, 0.2)
+axs[1].set_xlabel('time (s)')
+axs[1].set_ylabel('Acc. (g)')
+axs[1].grid(True)
+plt.legend()
+plt.suptitle("NASA KC135 Acceleration Data")
+plt.show()

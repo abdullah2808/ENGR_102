@@ -1,0 +1,6 @@
+space:5
+time:4
+space:3
+time:7
+space:2
+time:4
